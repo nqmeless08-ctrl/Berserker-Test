@@ -1,0 +1,24 @@
+name: ClassSystem
+version: '1.0.0'
+main: com.yourserver.classsystem.ClassSystemPlugin
+api-version: '1.21'
+author: YourServer
+description: Independent class system (Berserker, etc.) that layers on top of Origins-Reborn without modifying it.
+
+softdepend:
+  - floodgate
+  - Origins-Reborn
+
+commands:
+  class:
+    description: Opens the class selection menu.
+    usage: /class
+  setclass:
+    description: (Admin) Force-set a player's class.
+    usage: /setclass <player> <classid>
+    permission: classsystem.admin
+
+permissions:
+  classsystem.admin:
+    description: Allows forcing a player's class via command.
+    default: op
